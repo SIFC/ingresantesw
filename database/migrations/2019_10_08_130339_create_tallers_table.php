@@ -15,6 +15,10 @@ class CreateTallersTable extends Migration
     {
         Schema::create('tallers', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('qr');
+            $table->string('aula');
+            $table->string('ubicacion');
+            
             // $table->bigInteger('tienda_id')->unsigned();
             // $table->foreign('tienda_id')->references('id')->on('tiendas')->onDelete('cascade');
             $table->timestamps();
