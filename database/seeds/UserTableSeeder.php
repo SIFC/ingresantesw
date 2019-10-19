@@ -17,8 +17,8 @@ class UserTableSeeder extends Seeder
 
         $role_user = Role::where('name', 'user')->first();
         $role_admin = Role::where('name', 'admin')->first();
-        $role_admin = Role::where('name', 'alumno')->first();
-        $role_admin = Role::where('name', 'profesor')->first();
+        $role_alumno = Role::where('name', 'alumno')->first();
+        $role_profesor = Role::where('name', 'profesor')->first();
 
         $user = new User();
         $user->name = 'User';
@@ -51,7 +51,7 @@ class UserTableSeeder extends Seeder
         $user->email = 'alumno1@example.com';
         $user->password = bcrypt(12345678);
         $user->save();
-        $user->roles()->attach($role_admin);
+        $user->roles()->attach($role_alumno);
 
         $user = new User();
         $user->name = 'Profesor1';
@@ -62,6 +62,6 @@ class UserTableSeeder extends Seeder
         $user->email = 'profesor1@example.com';
         $user->password = bcrypt(12345678);
         $user->save();
-        $user->roles()->attach($role_admin);
+        $user->roles()->attach($role_profesor);
     }
 }
