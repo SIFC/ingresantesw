@@ -19,13 +19,15 @@ class HorarioTableSeeder extends Seeder
         $horario->horaInicio = '9:00';
         $horario->horaFin = '12:00';
         $horario->taller_id = '1';
-
+        $horario->save();
+        
         $horario = new horario();
         $horario->fechaTaller = '2020-02-16';
         $horario->dia = 'Martes';
         $horario->horaInicio = '7:00';
         $horario->horaFin = '10:00';
         $horario->taller_id = '2';
+        $horario->save();
 
         $horario = new horario();
         $horario->fechaTaller = '2020-02-17';
@@ -33,6 +35,7 @@ class HorarioTableSeeder extends Seeder
         $horario->horaInicio = '14:00';
         $horario->horaFin = '18:00';
         $horario->taller_id = '3';
+        $horario->save();
 
         $horario = new horario();
         $horario->fechaTaller = '2020-02-18';
@@ -40,5 +43,7 @@ class HorarioTableSeeder extends Seeder
         $horario->horaInicio = '16:00';
         $horario->horaFin = '120:00';
         $horario->taller_id = '4';
+        $horario->save();
+        
     }
 }
