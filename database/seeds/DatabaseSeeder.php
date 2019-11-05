@@ -65,32 +65,32 @@ class DatabaseSeeder extends Seeder
         $horario = new horario();
         $horario->fechaTaller = '2020-02-15';
         $horario->dia = 'Lunes';
-        $horario->horaInicio = '9:00';
-        $horario->horaFin = '12:00';
+        $horario->horaInicio = '2019-01-01 9:00';
+        $horario->horaFin = '2019-01-01 12:00';
         $horario->taller_id = '1';
         $horario->save();
 
         $horario = new horario();
         $horario->fechaTaller = '2020-02-16';
         $horario->dia = 'Martes';
-        $horario->horaInicio = '7:00';
-        $horario->horaFin = '10:00';
+        $horario->horaInicio = '2019-01-01 7:00';
+        $horario->horaFin = '2019-01-01 10:00';
         $horario->taller_id = '2';
         $horario->save();
 
         $horario = new horario();
         $horario->fechaTaller = '2020-02-17';
         $horario->dia = 'Miercoles';
-        $horario->horaInicio = '14:00';
-        $horario->horaFin = '18:00';
+        $horario->horaInicio = '2019-01-01 14:00';
+        $horario->horaFin = '2019-01-01 18:00';
         $horario->taller_id = '3';
         $horario->save();
 
         $horario = new horario();
         $horario->fechaTaller = '2020-02-18';
-        $horario->dia = 'Lunes - jueves';
-        $horario->horaInicio = '16:00';
-        $horario->horaFin = '120:00';
+        $horario->dia = 'Lunes - Jueves';
+        $horario->horaInicio = '2019-01-01 16:00';
+        $horario->horaFin = '2019-01-01 12:00';
         $horario->taller_id = '4';
         $horario->save();
     }
