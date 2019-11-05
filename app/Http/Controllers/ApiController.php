@@ -12,7 +12,7 @@ class ApiController extends Controller
         $lu =  $formdata->get('lu');
         $dni =  $formdata->get('dni');
 
-        $alumno = user::where(['lu'=>$lu,'dni'=>$dni])->first();
+        $alumno = user::with('talleres')->where(['lu'=>$lu,'dni'=>$dni])->first();
 
         if($alumno)
         {
