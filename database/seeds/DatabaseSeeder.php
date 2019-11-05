@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\taller;
 use App\horario;
+use App\User;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -21,6 +22,41 @@ class DatabaseSeeder extends Seeder
     $this->taller();
     // los Horarios necesitan los talleres cargados
     $this->horarios();
+
+    $this->inscripciones();
+    }
+
+    public function inscripciones()
+    {
+        User::find(1)->inscribir_taller(1);
+        User::find(1)->inscribir_taller(2);
+        User::find(1)->inscribir_taller(3);
+
+
+
+        User::find(2)->inscribir_taller(2);
+        User::find(2)->inscribir_taller(3);
+        User::find(2)->inscribir_taller(4);
+
+
+        User::find(3)->inscribir_taller(2);
+        User::find(3)->inscribir_taller(3);
+        User::find(3)->inscribir_taller(4);
+
+
+        User::find(4)->inscribir_taller(2);
+        User::find(4)->inscribir_taller(3);
+        User::find(4)->inscribir_taller(4);
+
+        User::find(5)->inscribir_taller(1);
+        User::find(5)->inscribir_taller(2);
+
+        User::find(5)->inscribir_taller(4);
+
+        User::find(6)->inscribir_taller(1);
+        User::find(6)->inscribir_taller(2);
+
+        User::find(6)->inscribir_taller(4);
     }
 
     public function horarios()
