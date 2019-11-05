@@ -66,11 +66,26 @@ public function hasAnyRole($roles)
     }
     return false;
 }
-public function hasRole($role)
-{
-    if ($this->roles()->where('name', $role)->first()) {
+    public function hasRole($role)
+    {
+        if ($this->roles()->where('name', $role)->first()) {
+            return true;
+        }
+        return false;
+    }
+
+    public function talleres()
+    {
+        return $this->belongsToMany('App\taller','taller_users')->withPivot('taller_id');
+    }
+
+    public function inscribir_taller($taller_id)
+    {
+        $t = new taller_user();
+        $t->user_id = $this->id;
+        $t->taller_id = $taller_id;
+        $t->save();
         return true;
     }
-    return false;
-}
+
 }
