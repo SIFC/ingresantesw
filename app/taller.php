@@ -14,7 +14,7 @@ class taller extends Model
 
     public function horarios()
     {
-        return $this->hasMany("App\Horario");
+        return $this->hasMany("App\horario");
     }
 
 
