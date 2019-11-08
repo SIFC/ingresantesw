@@ -61,106 +61,399 @@ class DatabaseSeeder extends Seeder
 
     public function horarios()
     {
-        //
+        // Primer Semana 
+        // Matemática TM
         $horario = new horario();
-        $horario->fechaTaller = '2020-02-15';
-        $horario->dia = 1;//lunes
-        $horario->horaInicio = '2019-01-01 9:00';
-        $horario->horaFin = '2019-01-01 12:00';
+        $horario->fechaTaller = '2020-02-03';
+        $horario->dia = 1; // lunes
+        $horario->horaInicio = '2020-02-03 8:00';
+        $horario->horaFin = '2020-02-03 10:00';
         $horario->taller_id = '1';
         $horario->save();
 
         $horario = new horario();
-        $horario->fechaTaller = '2020-02-15';
-        $horario->dia = 3; //lunes
-        $horario->horaInicio = '2019-01-01 9:00';
-        $horario->horaFin = '2019-01-01 12:00';
+        $horario->fechaTaller = '2020-02-04';
+        $horario->dia = 2; // martes
+        $horario->horaInicio = '2020-02-04 8:00';
+        $horario->horaFin = '2020-02-04 10:00';
         $horario->taller_id = '1';
         $horario->save();
 
         $horario = new horario();
-        $horario->fechaTaller = '2020-02-16';
-        $horario->dia = 2;//martes
-        $horario->horaInicio = '2019-01-01 7:00';
-        $horario->horaFin = '2019-01-01 10:00';
-        $horario->taller_id = '2';
+        $horario->fechaTaller = '2020-02-05';
+        $horario->dia = 3; // miercoles
+        $horario->horaInicio = '2020-02-05 8:00';
+        $horario->horaFin = '2020-02-05 10:00';
+        $horario->taller_id = '1';
         $horario->save();
 
         $horario = new horario();
-        $horario->fechaTaller = '2020-02-17';
-        $horario->dia = 3;//miercoles
-        $horario->horaInicio = '2019-01-01 14:00';
-        $horario->horaFin = '2019-01-01 18:00';
+        $horario->fechaTaller = '2020-02-06';
+        $horario->dia = 4; // jueves
+        $horario->horaInicio = '2020-02-06 8:00';
+        $horario->horaFin = '2020-02-06 10:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-07';
+        $horario->dia = 5; // viernes
+        $horario->horaInicio = '2020-02-07 8:00';
+        $horario->horaFin = '2020-02-07 10:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        // Matemática TT
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-03';
+        $horario->dia = 1; // lunes
+        $horario->horaInicio = '2020-02-03 16:00';
+        $horario->horaFin = '2020-02-03 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-04';
+        $horario->dia = 2; // martes
+        $horario->horaInicio = '2020-02-04 16:00';
+        $horario->horaFin = '2020-02-04 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-05';
+        $horario->dia = 3; // miercoles
+        $horario->horaInicio = '2020-02-05 16:00';
+        $horario->horaFin = '2020-02-05 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-06';
+        $horario->dia = 4; // jueves
+        $horario->horaInicio = '2020-02-06 16:00';
+        $horario->horaFin = '2020-02-06 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-07';
+        $horario->dia = 5; // viernes
+        $horario->horaInicio = '2020-02-07 16:00';
+        $horario->horaFin = '2020-02-07 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        // **************************************************
+        //Competencias Digitales TMediodia
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-03';
+        $horario->dia = 1; // lunes
+        $horario->horaInicio = '2020-02-03 10:30';
+        $horario->horaFin = '2020-02-03 12:30';
         $horario->taller_id = '3';
         $horario->save();
 
         $horario = new horario();
-        $horario->fechaTaller = '2020-02-18';
-        $horario->dia = 1;//lunes
-        $horario->horaInicio = '2019-01-01 16:00';
-        $horario->horaFin = '2019-01-01 12:00';
+        $horario->fechaTaller = '2020-02-04';
+        $horario->dia = 2; // nartes
+        $horario->horaInicio = '2020-02-04 10:30';
+        $horario->horaFin = '2020-02-04 12:30';
+        $horario->taller_id = '3';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-05';
+        $horario->dia = 3; // miercoles
+        $horario->horaInicio = '2020-02-05 10:30';
+        $horario->horaFin = '2020-02-05 12:30';
+        $horario->taller_id = '3';
+        $horario->save();
+        // Gabinere/SAE
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-06';
+        $horario->dia = 4; // jueves
+        $horario->horaInicio = '2020-02-06 10:30';
+        $horario->horaFin = '2020-02-06 12:30';
         $horario->taller_id = '4';
         $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-07';
+        $horario->dia = 5; // viernes
+        $horario->horaInicio = '2020-02-07 10:30';
+        $horario->horaFin = '2020-02-07 12:30';
+        $horario->taller_id = '4';
+        $horario->save();
+
+        //Competencias Digitales TNoche
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-03';
+        $horario->dia = 1; // lunes
+        $horario->horaInicio = '2020-02-03 18:30';
+        $horario->horaFin = '2020-02-03 20:30';
+        $horario->taller_id = '3';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-04';
+        $horario->dia = 2; // martes
+        $horario->horaInicio = '2020-02-04 18:30';
+        $horario->horaFin = '2020-02-04 20:30';
+        $horario->taller_id = '3';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-05';
+        $horario->dia = 3; // miercoles
+        $horario->horaInicio = '2020-02-05 18:30';
+        $horario->horaFin = '2020-02-05 20:30';
+        $horario->taller_id = '3';
+        $horario->save();
+        // Gabinere/SAE
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-06';
+        $horario->dia = 4; // jueves
+        $horario->horaInicio = '2020-02-06 18:30';
+        $horario->horaFin = '2020-02-06 20:30';
+        $horario->taller_id = '4';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-07';
+        $horario->dia = 5; // viernes
+        $horario->horaInicio = '2020-02-07 18:30';
+        $horario->horaFin = '2020-02-07 20:30';
+        $horario->taller_id = '4';
+        $horario->save();
+    
+    // *************************************************************************************************
+        // Segunda Semana 
+        // Matemática TM
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-10';
+        $horario->dia = 2; // martes
+        $horario->horaInicio = '2020-02-10 8:00';
+        $horario->horaFin = '2020-02-10 10:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-11';
+        $horario->dia = 2; // martes
+        $horario->horaInicio = '2020-02-11 8:00';
+        $horario->horaFin = '2020-02-11 10:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-12';
+        $horario->dia = 3; // miercoles
+        $horario->horaInicio = '2020-02-12 8:00';
+        $horario->horaFin = '2020-02-12 10:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-13';
+        $horario->dia = 4; // jueves
+        $horario->horaInicio = '2020-02-13 8:00';
+        $horario->horaFin = '2020-02-13 10:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-14';
+        $horario->dia = 5; // viernes
+        $horario->horaInicio = '2020-02-14 8:00';
+        $horario->horaFin = '2020-02-14 10:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        // Matemática TT
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-10';
+        $horario->dia = 1; // lunes
+        $horario->horaInicio = '2020-02-10 16:00';
+        $horario->horaFin = '2020-02-10 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-11';
+        $horario->dia = 2; // martes
+        $horario->horaInicio = '2020-02-11 16:00';
+        $horario->horaFin = '2020-02-11 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-12';
+        $horario->dia = 3; // miercoles
+        $horario->horaInicio = '2020-02-12 16:00';
+        $horario->horaFin = '2020-02-12 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-13';
+        $horario->dia = 4; // jueves
+        $horario->horaInicio = '2020-02-13 16:00';
+        $horario->horaFin = '2020-02-13 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-14';
+        $horario->dia = 5; // viernes
+        $horario->horaInicio = '2020-02-14 16:00';
+        $horario->horaFin = '2020-02-14 18:00';
+        $horario->taller_id = '1';
+        $horario->save();
+
+        // Lectura de texto TMediodia
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-10';
+        $horario->dia = 1; // lunes
+        $horario->horaInicio = '2020-02-10 10:30';
+        $horario->horaFin = '2020-02-10 12:30';
+        $horario->taller_id = '2';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-11';
+        $horario->dia = 2; // nartes
+        $horario->horaInicio = '2020-02-11 10:30';
+        $horario->horaFin = '2020-02-11 12:30';
+        $horario->taller_id = '2';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-12';
+        $horario->dia = 3; // miercoles
+        $horario->horaInicio = '2020-02-12 10:30';
+        $horario->horaFin = '2020-02-12 12:30';
+        $horario->taller_id = '2';
+        $horario->save();
+       
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-13';
+        $horario->dia = 4; // jueves
+        $horario->horaInicio = '2020-02-13 10:30';
+        $horario->horaFin = '2020-02-13 12:30';
+        $horario->taller_id = '2';
+        $horario->save();
+        // Integracion
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-14';
+        $horario->dia = 5; // viernes
+        $horario->horaInicio = '2020-02-14 10:30';
+        $horario->horaFin = '2020-02-14 12:30';
+        $horario->taller_id = '5';
+        $horario->save();
+
+        //Lectura de Texto TNoche
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-10';
+        $horario->dia = 1; // lunes
+        $horario->horaInicio = '2020-02-10 18:30';
+        $horario->horaFin = '2020-02-10 20:30';
+        $horario->taller_id = '2';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-11';
+        $horario->dia = 2; // martes
+        $horario->horaInicio = '2020-02-11 18:30';
+        $horario->horaFin = '2020-02-11 20:30';
+        $horario->taller_id = '2';
+        $horario->save();
+
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-12';
+        $horario->dia = 3; // miercoles
+        $horario->horaInicio = '2020-02-12 18:30';
+        $horario->horaFin = '2020-02-12 20:30';
+        $horario->taller_id = '2';
+        $horario->save();
+      
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-13';
+        $horario->dia = 4; // jueves
+        $horario->horaInicio = '2020-02-13 18:30';
+        $horario->horaFin = '2020-02-13 20:30';
+        $horario->taller_id = '2';
+        $horario->save();
+        //integracion
+        $horario = new horario();
+        $horario->fechaTaller = '2020-02-14';
+        $horario->dia = 5; // viernes
+        $horario->horaInicio = '2020-02-14 18:30';
+        $horario->horaFin = '2020-02-14 20:30';
+        $horario->taller_id = '5';
+        $horario->save();
+
     }
+    // ******************************************************************
     public function taller()
     {
         //
         $taller = new taller();
         $taller->qr = 'codigo1';
-        $taller->titulo = 'Estrategias motivadoras para la enseñanza de la programación con PseInt';
-        $taller->contexto = 'Asignatura: Elementos de Computación. Área de programación y desarrollo de
-        software.';
-        $taller->objetivo = 'Fortalecer y afianzar la enseñanza y aprendizaje de los fundamentos básicos.';
-        $taller->contenidos = ' Algoritmia y pseudocódigo ejecutable';
-        $taller->metodologia = 'Las clases se realizarán en la modalidad “frente a la máquina”. Los temas se
-        presentarán con una breve exposición teórica';
-        $taller->duracion = '9 hs. presenciales y 5 virtuales';
-        $taller->ubicacion = '9 de julio ';
+        $taller->titulo = 'Matemática';
+        $taller->contexto = '';
+        $taller->objetivo = '';
+        $taller->contenidos = '';
+        $taller->metodologia = '';
+        $taller->duracion = '20';
+        $taller->ubicacion = 'campus ';
         $taller->aula = 'Magna';
         $taller->save();
 
         $taller = new taller();
         $taller->qr = 'codigo2';
-        $taller->titulo = 'Desarrollo de Aplicaciones Móviles en Android Studio';
-        $taller->contexto = 'Requerimientos específicos en el desarrollo de aplicaciones móviles con
-        Android Studio/Ingeniería de Software I';
-        $taller->objetivo = 'Proporcionar conceptos teóricos y prácticos que permitan disponer en el pc';
-        $taller->contenidos = 'Introducción a las metodologías de desarrollo de Software Agile para Sistemas
-        Móviles.';
-        $taller->metodologia = 'El curso se desarrollará bajo la metodología teórico-práctico en donde se
-        abarcarán los temas y de forma paralela se realizan las prácticas de aplicación';
-        $taller->duracion = '15 hs presenciales y 5 hs de estudio independiente';
-        $taller->ubicacion = '9 de julio ';
+        $taller->titulo = 'Lectura y Compresiòn de Textos';
+        $taller->contexto = '';
+        $taller->objetivo = '';
+        $taller->contenidos = '';
+        $taller->metodologia = '';
+        $taller->duracion = '8';
+        $taller->ubicacion = 'campus';
         $taller->aula = 'Laboratorio 1';
         $taller->save();
 
         $taller = new taller();
         $taller->qr = 'codigo3';
-        $taller->titulo = 'IoT con Intel Galileo';
-        $taller->contexto = 'Requerimientos específicos en el desarrollo de aplicaciones móviles con
-        Android Studio/Ingeniería de Software I';
-        $taller->objetivo = 'Proporcionar conceptos teóricos y prácticos que permitan disponer en el pc, el
-        entorno de trabajo y las herramientas necesarias para desarrollar ';
-        $taller->contenidos = 'Actividades teórico prácticas para dar respuesta a los
-        interrogantes';
-        $taller->metodologia = 'Se desarrollarán cinco encuentros teóricos-prácticos de 2 horas.
-        Para la aprobación';
-        $taller->duracion = '10 horas presenciales y 5 horas de trabajo independiente.';
+        $taller->titulo = 'Competencias Digitales';
+        $taller->contexto = '';
+        $taller->objetivo = '';
+        $taller->contenidos = '';
+        $taller->metodologia = '';
+        $taller->duracion = '6';
         $taller->ubicacion = 'Campus ';
         $taller->aula = 'Magna';
         $taller->save();
 
         $taller = new taller();
         $taller->qr = 'codigo4';
-        $taller->titulo = 'Herramientas colaborativas para el trabajo en equipo';
-        $taller->contexto = 'Sistemas y Organizaciones';
-        $taller->objetivo = 'Qué los cursantes:
-         Logren identificar la importancia del trabajo en equipo en sus prácticas';
-        $taller->contenidos = ' Diferenciación de nociones de grupo y equipo de trabajo.
-        Características y condiciones para el trabajo en equipo.';
-        $taller->metodologia = 'Se desarrollarán 5 encuentros teóricos-prácticos de 3 horas.
-        Clases teórico-prácticas.';
-        $taller->duracion = '15 horas presenciales y 3 horas de trabajo en la plataforma virtual.';
+        $taller->titulo = 'Gabinete Psicopedagógico';
+        $taller->contexto = '';
+        $taller->objetivo = '';
+        $taller->contenidos = '';
+        $taller->metodologia = '';
+        $taller->duracion = '2';
+        $taller->ubicacion = 'Campus ';
+        $taller->aula = 'Quimica 1';
+        $taller->save();
+
+        $taller = new taller();
+        $taller->qr = 'codigo5';
+        $taller->titulo = 'Integridad';
+        $taller->contexto = '';
+        $taller->objetivo = '';
+        $taller->contenidos = '';
+        $taller->metodologia = '';
+        $taller->duracion = '2';
         $taller->ubicacion = 'Campus ';
         $taller->aula = 'Quimica 1';
         $taller->save();

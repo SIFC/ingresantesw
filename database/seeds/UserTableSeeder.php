@@ -19,7 +19,7 @@ class UserTableSeeder extends Seeder
         // $role_admin = Role::where('name', 'admin')->first();
         $role_alumno = Role::where('name', 'alumno')->first();
         $role_profesor = Role::where('name', 'profesor')->first();
-
+        $role_coordinador = Role::where('name', 'coordinador')->first();
         // $user = new User();
         // $user->name = 'User';
         // $user->nombre = '';
@@ -77,36 +77,73 @@ class UserTableSeeder extends Seeder
         $user->roles()->attach($role_alumno);
 // ------------------------------------ Profesores ------------------------------------------------
         $user = new User();
-        $user->name = 'Profesor Ivan';
-        $user->nombre = 'Ivan';
-        $user->apellido = 'Sambrana';
+        $user->name = 'Prof. Germán Torres';
+        $user->nombre = 'Germán';
+        $user->apellido = 'Torres';
         $user->dni = '36112753';
         $user->lu = '44559';
-        $user->email = 'profesor1@example.com';
+        $user->email = 'gtorres@example.com';
         $user->password = bcrypt(12345678);
         $user->save();
         $user->roles()->attach($role_profesor);
 
         $user = new User();
-        $user->name = 'Profesor Alejandro';
-        $user->nombre = 'Alejandro';
-        $user->apellido = 'Sambrana';
+        $user->name = 'Prof. Alexandra Rey';
+        $user->nombre = 'Alexandra';
+        $user->apellido = 'Rey';
         $user->dni = '36112754';
         $user->lu = '44560';
-        $user->email = 'profesor2@example.com';
+        $user->email = 'arey@example.com';
         $user->password = bcrypt(12345678);
         $user->save();
         $user->roles()->attach($role_profesor);
 
         $user = new User();
-        $user->name = 'Profesor Emanuel';
-        $user->nombre = 'Emanuel';
-        $user->apellido = 'Irrazabal';
+        $user->name = 'Prof. Agustina Ibarrola';
+        $user->nombre = 'Agustina';
+        $user->apellido = 'Ibarrola';
         $user->dni = '36112756';
         $user->lu = '44561';
-        $user->email = 'profesor3@example.com';
+        $user->email = 'Aibarrola@example.com';
         $user->password = bcrypt(12345678);
         $user->save();
         $user->roles()->attach($role_profesor);
+
+        $user = new User();
+        $user->name = 'Prof. Agustina Ibarrola';
+        $user->nombre = 'Agustina';
+        $user->apellido = 'Ibarrola';
+        $user->dni = '36112756';
+        $user->lu = '44561';
+        $user->email = 'Aibarrola@example.com';
+        $user->password = bcrypt(12345678);
+        $user->save();
+        $user->roles()->attach($role_profesor);
+        $user->roles()->attach($role_coordinador);
+
+        $user = new User();
+        $user->name = 'Prof. Alejandra Matoso';
+        $user->nombre = 'Alejandra';
+        $user->apellido = 'Matoso';
+        $user->dni = '36112756';
+        $user->lu = '44561';
+        $user->email = 'amatoso@example.com';
+        $user->password = bcrypt(12345678);
+        $user->save();
+        $user->roles()->attach($role_profesor);
+        $user->roles()->attach($role_coordinador);
+
+        $user = new User();
+        $user->name = 'Prof. Mirta Fernandez';
+        $user->nombre = 'Mirta';
+        $user->apellido = 'Fernandez';
+        $user->dni = '36112756';
+        $user->lu = '44561';
+        $user->email = 'mfernandez@example.com';
+        $user->password = bcrypt(12345678);
+        $user->save();
+        $user->roles()->attach($role_profesor);
+        $user->roles()->attach($role_coordinador);
+        
     }
 }
