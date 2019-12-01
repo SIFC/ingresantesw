@@ -15,12 +15,12 @@ class CreateAsistenciasTable extends Migration
     {
         Schema::create('asistencias', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('fechaAsistencia');
-            $table->string('hora');
+            $table->date('fechaAsistencia');
+            $table->date('hora');
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->bigInteger('taller_id')->unsigned();
-            $table->foreign('taller_id')->references('id')->on('tallers')->onDelete('cascade');
+            $table->bigInteger('horario_id')->unsigned();
+            $table->foreign('horario_id')->references('id')->on('horarios')->onDelete('cascade');
             $table->timestamps();
         });
     }
