@@ -22,7 +22,8 @@ class ApiController extends Controller
         }
         else
         {
-            return response("Alumno no existe",400);
+
+            return  response()->json('{data:"error"}', 200);
         }
 
     }
