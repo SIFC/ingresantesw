@@ -58,7 +58,8 @@ class ApiController extends Controller
                 }
                 else
                 {
-                    return response("Fuera de Horario",200);
+                    return response("Fuera de Horario",400);
+
                 }
             }
             else
