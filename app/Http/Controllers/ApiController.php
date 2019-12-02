@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\User;
 use App\taller;
@@ -22,8 +23,8 @@ class ApiController extends Controller
         }
         else
         {
-
-            return  response()->json(['data'=>'error'], 400);
+            $res = (object) ['data' => 'error'];
+            return  response()->json($res, 400);
         }
 
     }
