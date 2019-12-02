@@ -23,7 +23,7 @@ class ApiController extends Controller
         else
         {
 
-            return  response()->json('{data:"error"}', 400);
+            return  response()->json(['data'=>'error'], 400);
         }
 
     }
@@ -58,7 +58,7 @@ class ApiController extends Controller
                 }
                 else
                 {
-                    return response("Fuera de Horario",200);
+                    return response("Fuera de Horario",400);
                 }
             }
             else
