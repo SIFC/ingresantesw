@@ -66,13 +66,11 @@ class ApiController extends Controller
             {
                 return response("No inscripto", 400);
             }
-
          }
          else
          {
              return response("No existe Taller",400);
          }
-
          ///verifico si el alumno esta inscripto al taller
 
 

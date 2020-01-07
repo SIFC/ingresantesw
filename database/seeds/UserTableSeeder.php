@@ -98,7 +98,7 @@ class UserTableSeeder extends Seeder
         $user->save();
         $user->roles()->attach($role_profesor);
 
-    
+
         $user = new User();
         $user->name = 'Prof. Agustina Ibarrola';
         $user->nombre = 'Agustina';
@@ -134,6 +134,6 @@ class UserTableSeeder extends Seeder
         $user->save();
         $user->roles()->attach($role_profesor);
         $user->roles()->attach($role_coordinador);
-        
+
     }
 }
