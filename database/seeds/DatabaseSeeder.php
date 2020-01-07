@@ -28,40 +28,33 @@ class DatabaseSeeder extends Seeder
 
     public function inscripciones()
     {
-        User::find(1)->inscribir_taller(1);
-        User::find(1)->inscribir_taller(2);
-        User::find(1)->inscribir_taller(3);
+        // User::find(1)->inscribir_taller(1);
+        // User::find(1)->inscribir_taller(2);
+        // User::find(1)->inscribir_taller(3);
+
+        /**
+         * Inscribir a todos en todos los talleres
+         */
+
+            $users = User::all();
+
+            foreach ($users as $user)
+            {
+                if($user->id > 1000 || $user->id <= 2)
+                {
+                    $user::find(1)->inscribir_taller(1);
+                    $user::find(1)->inscribir_taller(2);
+                    $user::find(1)->inscribir_taller(3);
+                    $user::find(1)->inscribir_taller(4);
+                }
+            }
 
 
-
-        User::find(2)->inscribir_taller(2);
-        User::find(2)->inscribir_taller(3);
-        User::find(2)->inscribir_taller(4);
-
-
-        User::find(3)->inscribir_taller(2);
-        User::find(3)->inscribir_taller(3);
-        User::find(3)->inscribir_taller(4);
-
-
-        User::find(4)->inscribir_taller(2);
-        User::find(4)->inscribir_taller(3);
-        User::find(4)->inscribir_taller(4);
-
-        User::find(5)->inscribir_taller(1);
-        User::find(5)->inscribir_taller(2);
-
-        User::find(5)->inscribir_taller(4);
-
-        User::find(6)->inscribir_taller(1);
-        User::find(6)->inscribir_taller(2);
-
-        User::find(6)->inscribir_taller(4);
     }
 
     public function horarios()
     {
-        // Primer Semana 
+        // Primer Semana
         // Matemática TM
         $horario = new horario();
         $horario->fechaTaller = '2020-02-03';
@@ -226,9 +219,9 @@ class DatabaseSeeder extends Seeder
         $horario->horaFin = '2020-02-07 20:30';
         $horario->taller_id = '4';
         $horario->save();
-    
+
     // *************************************************************************************************
-        // Segunda Semana 
+        // Segunda Semana
         // Matemática TM
         $horario = new horario();
         $horario->fechaTaller = '2020-02-10';
@@ -335,7 +328,7 @@ class DatabaseSeeder extends Seeder
         $horario->horaFin = '2020-02-12 12:30';
         $horario->taller_id = '2';
         $horario->save();
-       
+
         $horario = new horario();
         $horario->fechaTaller = '2020-02-13';
         $horario->dia = 4; // jueves
@@ -376,7 +369,7 @@ class DatabaseSeeder extends Seeder
         $horario->horaFin = '2020-02-12 20:30';
         $horario->taller_id = '2';
         $horario->save();
-      
+
         $horario = new horario();
         $horario->fechaTaller = '2020-02-13';
         $horario->dia = 4; // jueves
