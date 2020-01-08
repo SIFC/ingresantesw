@@ -42,10 +42,10 @@ class DatabaseSeeder extends Seeder
             {
                 if($user->id > 1000 || $user->id <= 2)
                 {
-                    $user::find(1)->inscribir_taller(1);
-                    $user::find(1)->inscribir_taller(2);
-                    $user::find(1)->inscribir_taller(3);
-                    $user::find(1)->inscribir_taller(4);
+                    $user->inscribir_taller(1);
+                    $user->inscribir_taller(2);
+                    $user->inscribir_taller(3);
+                    $user->inscribir_taller(4);
                 }
             }
 
