@@ -49,6 +49,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-03 10:00';
             $horario->taller_id = '1'; //
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -58,6 +59,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-04 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -67,6 +69,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-05 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -76,6 +79,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-06 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -85,6 +89,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-07 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             //
@@ -97,6 +102,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-03 12:30';
             $horario->taller_id = '3';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(3)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -106,6 +112,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-04 12:30';
             $horario->taller_id = '3';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(3)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -115,6 +122,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-05 12:30';
             $horario->taller_id = '3';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(3)->alias.'_'.$grupo;
             $horario->save();
             // Gabinere/SAE
             $horario = new horario();
@@ -124,6 +132,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-06 12:30';
             $horario->taller_id = '4';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(4)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -133,6 +142,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-07 12:30';
             $horario->taller_id = '4';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(4)->alias.'_'.$grupo;
             $horario->save();
 
 
@@ -146,6 +156,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-10 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -155,6 +166,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-11 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -164,6 +176,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-12 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -173,6 +186,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-13 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -182,6 +196,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-14 10:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             // Lectura de texto TMediodia
@@ -192,6 +207,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-10 12:30';
             $horario->taller_id = '2';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(2)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -201,6 +217,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-11 12:30';
             $horario->taller_id = '2';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(2)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -210,6 +227,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-12 12:30';
             $horario->taller_id = '2';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(2)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -219,6 +237,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-13 12:30';
             $horario->taller_id = '2';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(2)->alias.'_'.$grupo;
             $horario->save();
             // Integracion
             $horario = new horario();
@@ -228,6 +247,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-14 12:30';
             $horario->taller_id = '5';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(5)->alias.'_'.$grupo;
             $horario->save();
 
 
@@ -243,6 +263,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-03 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -252,6 +273,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-04 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -261,6 +283,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-05 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -270,6 +293,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-06 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -279,6 +303,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-07 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             // **************************************************
@@ -291,6 +316,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-03 20:30';
             $horario->taller_id = '3';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(3)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -300,6 +326,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-04 20:30';
             $horario->taller_id = '3';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(3)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -309,6 +336,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-05 20:30';
             $horario->taller_id = '3';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(3)->alias.'_'.$grupo;
             $horario->save();
             // Gabinere/SAE
             $horario = new horario();
@@ -318,6 +346,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-06 20:30';
             $horario->taller_id = '4';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(4)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -327,6 +356,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-07 20:30';
             $horario->taller_id = '4';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(4)->alias.'_'.$grupo;
             $horario->save();
 
 
@@ -339,6 +369,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-10 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -348,6 +379,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-11 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -357,6 +389,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-12 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -366,6 +399,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-13 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -375,6 +409,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-14 18:00';
             $horario->taller_id = '1';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(1)->alias.'_'.$grupo;
             $horario->save();
 
 
@@ -386,6 +421,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-10 20:30';
             $horario->taller_id = '2';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(2)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -395,6 +431,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-11 20:30';
             $horario->taller_id = '2';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(2)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -404,6 +441,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-12 20:30';
             $horario->taller_id = '2';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(2)->alias.'_'.$grupo;
             $horario->save();
 
             $horario = new horario();
@@ -413,6 +451,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-13 20:30';
             $horario->taller_id = '2';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(2)->alias.'_'.$grupo;
             $horario->save();
             //integracion
             $horario = new horario();
@@ -422,6 +461,7 @@ class DatabaseSeeder extends Seeder
             $horario->horaFin = '2020-02-14 20:30';
             $horario->taller_id = '5';
             $horario->grupo = $grupo; //
+            $horario->codigo_qr = taller::find(5)->alias.'_'.$grupo;
             $horario->save();
         }
 
@@ -442,8 +482,9 @@ class DatabaseSeeder extends Seeder
     {
         //
         $taller = new taller();
-        $taller->qr = 'codigo1';
+        // $taller->qr = 'codigo1';
         $taller->titulo = 'Matemática';
+        $taller->alias = 'matematicas';
         $taller->contexto = '';
         $taller->objetivo = '';
         $taller->contenidos = '';
@@ -453,8 +494,9 @@ class DatabaseSeeder extends Seeder
         $taller->save();
 
         $taller = new taller();
-        $taller->qr = 'codigo2';
+        // $taller->qr = 'codigo2';
         $taller->titulo = 'Lectura y Compresiòn de Textos';
+        $taller->alias = 'textos';
         $taller->contexto = '';
         $taller->objetivo = '';
         $taller->contenidos = '';
@@ -464,8 +506,9 @@ class DatabaseSeeder extends Seeder
         $taller->save();
 
         $taller = new taller();
-        $taller->qr = 'codigo3';
+        // $taller->qr = 'codigo3';
         $taller->titulo = 'Competencias Digitales';
+        $taller->alias = 'digitales';
         $taller->contexto = '';
         $taller->objetivo = '';
         $taller->contenidos = '';
@@ -475,8 +518,9 @@ class DatabaseSeeder extends Seeder
         $taller->save();
 
         $taller = new taller();
-        $taller->qr = 'codigo4';
+        // $taller->qr = 'codigo4';
         $taller->titulo = 'Gabinete Psicopedagógico';
+        $taller->alias = 'Gabinete';
         $taller->contexto = '';
         $taller->objetivo = '';
         $taller->contenidos = '';
@@ -486,8 +530,9 @@ class DatabaseSeeder extends Seeder
         $taller->save();
 
         $taller = new taller();
-        $taller->qr = 'codigo5';
-        $taller->titulo = 'Integridad';
+        // $taller->qr = 'codigo5';
+        $taller->titulo = 'Integración';
+        $taller->alias = 'Integracion';
         $taller->contexto = '';
         $taller->objetivo = '';
         $taller->contenidos = '';

@@ -24,6 +24,7 @@ class CreateHorariosTable extends Migration
             $table->string('aula')->nullable();
             $table->string('ubicacion')->nullable();
             $table->integer('grupo');
+            $table->string('codigo_qr')->nullable();
             $table->timestamps();
         });
     }

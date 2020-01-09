@@ -15,15 +15,13 @@ class CreateTallersTable extends Migration
     {
         Schema::create('tallers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('qr');
             $table->string('titulo');
+            $table->string('alias');
             $table->string('contexto');
             $table->string('objetivo');
             $table->string('contenidos');
             $table->string('metodologia');
             $table->string('duracion');
-
-            $table->unsignedInteger('grupo_id')->default(0);
             // $table->bigInteger('tienda_id')->unsigned();
             // $table->foreign('tienda_id')->ref-erences('id')->on('tiendas')->onDelete('cascade');
             $table->timestamps();
