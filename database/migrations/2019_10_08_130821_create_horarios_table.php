@@ -21,6 +21,9 @@ class CreateHorariosTable extends Migration
             $table->dateTime('horaFin');
             $table->bigInteger('taller_id')->unsigned();
             $table->foreign('taller_id')->references('id')->on('tallers')->onDelete('cascade');
+            $table->string('aula')->nullable();
+            $table->string('ubicacion')->nullable();
+            $table->integer('grupo');
             $table->timestamps();
         });
     }

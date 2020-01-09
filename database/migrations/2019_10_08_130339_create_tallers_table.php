@@ -22,10 +22,10 @@ class CreateTallersTable extends Migration
             $table->string('contenidos');
             $table->string('metodologia');
             $table->string('duracion');
-            $table->string('aula');
-            $table->string('ubicacion');
+
+            $table->unsignedInteger('grupo_id')->default(0);
             // $table->bigInteger('tienda_id')->unsigned();
-            // $table->foreign('tienda_id')->references('id')->on('tiendas')->onDelete('cascade');
+            // $table->foreign('tienda_id')->ref-erences('id')->on('tiendas')->onDelete('cascade');
             $table->timestamps();
         });
     }
