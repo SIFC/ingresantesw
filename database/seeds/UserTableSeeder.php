@@ -92,7 +92,7 @@ class UserTableSeeder extends Seeder
         $user->dni = '36112753';
         $user->lu = '44559';
         $user->grupo = '8';
-        $user->email = 'alumno3@example.com';
+        $user->email = 'sambranaivan@example.com';
         $user->password = bcrypt(12345678);
         $user->save();
         $user->roles()->attach($role_alumno);
