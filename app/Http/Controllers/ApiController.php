@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\taller;
+use App\horario;
 use Illuminate\Support\Carbon;
 
 class ApiController extends Controller
@@ -15,7 +16,13 @@ class ApiController extends Controller
         $lu =  $formdata->get('lu');
         $dni =  $formdata->get('dni');
 
-        $alumno = user::with(['roles','talleres.horarios'])->where(['lu'=>$lu,'dni'=>$dni])->first();
+        $alumno = user::with(['roles'])->where(['lu'=>$lu,'dni'=>$dni])->first();
+        $grupo = $alumno->grupo;
+        $talleres = taller::with(['horarios'=> function($query) use ($grupo){
+           $query->where('horarios.grupo',$grupo)->get();
+        }])->get();
+
+        $alumno['talleres'] = $talleres;
 
         if($alumno)
         {
