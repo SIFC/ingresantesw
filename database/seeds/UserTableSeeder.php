@@ -58,6 +58,7 @@ class UserTableSeeder extends Seeder
         $user->lu = '43882';
         $user->email = 'alumno1@example.com';
         $user->password = bcrypt(12345678);
+        $user->grupo = 1;
         $user->save();
         $user->roles()->attach($role_alumno);
 
@@ -65,6 +66,7 @@ class UserTableSeeder extends Seeder
         $user->name = 'Alumno Andre';
         $user->nombre = 'Andrea';
         $user->apellido = 'Cabrera';
+        $user->grupo = 2;
         $user->dni = '36112458';
         $user->lu = '43883';
         $user->email = 'alumno2@example.com';
@@ -82,12 +84,24 @@ class UserTableSeeder extends Seeder
         $user->password = bcrypt(12345678);
         $user->save();
         $user->roles()->attach($role_alumno);
+
+        $user = new User();
+        $user->name = 'Alumno Ivan';
+        $user->nombre = 'Ivan';
+        $user->apellido = 'Sambrana';
+        $user->dni = '36112753';
+        $user->lu = '44559';
+        $user->grupo = '8';
+        $user->email = 'alumno3@example.com';
+        $user->password = bcrypt(12345678);
+        $user->save();
+        $user->roles()->attach($role_alumno);
 // ------------------------------------ Profesores ------------------------------------------------
         $user = new User();
         $user->name = 'Prof. Germán Torres';
         $user->nombre = 'Germán';
         $user->apellido = 'Torres';
-        $user->dni = '36112753';
+        $user->dni = '36112653';
         $user->lu = '44559';
         $user->email = 'gtorres@example.com';
         $user->password = bcrypt(12345678);
