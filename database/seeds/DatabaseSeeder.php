@@ -161,7 +161,7 @@ class DatabaseSeeder extends Seeder
 
             $horario = new horario();
             $horario->fechaTaller = '2020-02-11';
-            $horario->dia = 2; // martes
+            $horario->dia = 3; // martes
             $horario->horaInicio = '2020-02-11 8:00';
             $horario->horaFin = '2020-02-11 10:00';
             $horario->taller_id = '1';
