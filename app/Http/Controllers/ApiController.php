@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\taller;
 use App\horario;
+use App\asistencia;
 use Illuminate\Support\Carbon;
 
 class ApiController extends Controller
@@ -45,42 +46,51 @@ class ApiController extends Controller
          */
 
          $user = User::find($formdata->get('user_id'));
+         $qr = $formdata->get('qr');
         //  echo $user->name;
-         $taller = taller::where('qr',$formdata->get('qr'))->first();
+        //  $taller = taller::where('qr',$formdata->get('qr'))->first();
 
 
 
-        $hora = Carbon::createFromTimestamp(floor($formdata->fecha / 1000), 'America/Argentina/Buenos_Aires')->toDateTimeString();
-        // $date = Carbon::createFromFormat('Y-m-d H:i:s', floor($formdata->timestamp / 1000), 'America/Argentina/Buenos_Aires');
-        // return $hora;
+        $time = floor($formdata->timestamp / 1000);
 
-         if($taller)
-         {
-            if($user->talleres->contains($taller))
-            {
-                // return $taller->horarios;
-                $_taller =  $taller->horarios->where('horaInicio','<=', $hora)->where('horaFin','>=', $hora)->first();
-                if($_taller)
-                {
-                   return response("presente",200);
-                }
-                else
-                {
-                    return response("Fuera de Horario",400);
-                }
-            }
-            else
-            {
-                return response("No inscripto", 400);
-            }
-         }
-         else
-         {
-             return response("No existe Taller",400);
-         }
-         ///verifico si el alumno esta inscripto al taller
+        $hora_real = Carbon::createFromTimestamp($time, 'America/Argentina/Buenos_Aires')->toDateTimeString();
+        // sumar 20 minutos por lo de llegar temprano
+        $hora = Carbon::createFromTimestamp($time +  (20 * 60), 'America/Argentina/Buenos_Aires')->toDateTimeString();
+        // print $hora;
+
+        $horario = horario::where(['codigo_qr'=>$qr,'grupo'=>$user->grupo])
+                    ->where('horaInicio','<=', $hora)
+                    ->where('horaFin','>=', $hora)->first();
 
 
+                    if($horario->count())
+                    {
+
+                        $asistencia = asistencia::where(['horario_id'=>$horario->id,'user_id'=>$user->id])->first();
+                        if($asistencia)
+                        {
+                            return response()->json((object) [
+                                "data" => 'Ya figura presente'
+                            ], 200);
+                        }
+                        else
+                        {
+                            $asistencia = new asistencia();
+                            $asistencia->user_id = $user->id;
+                            $asistencia->horario_id = $horario->id;
+                            $asistencia->fechaAsistencia = $hora_real;
+                            $asistencia->hora = $hora_real;
+                            $asistencia->save();
+                            return response()->json((object) [
+                                "data" => 'Presente'
+                            ], 200);
+                        }
+
+                    }
+                    else {
+                        return response('error', 400);
+                    }
 
     }
 }
