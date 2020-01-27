@@ -77,7 +77,7 @@ class ApiController extends Controller
                     ->where('horaFin','>=', $hora)->first();
 
 
-                    if($horario->count())
+                    if($horario)
                     {
 
                         $asistencia = asistencia::where(['horario_id'=>$horario->id,'user_id'=>$user->id])->first();
@@ -102,7 +102,9 @@ class ApiController extends Controller
 
                     }
                     else {
-                        return response('error', 400);
+            return response()->json((object) [
+                "data" => 'Fuera de Horario'
+            ], 400);
                     }
 
     }
