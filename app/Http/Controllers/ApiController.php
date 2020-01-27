@@ -23,7 +23,20 @@ class ApiController extends Controller
            $query->where('horarios.grupo',$grupo)->get();
         }])->get();
 
+
+        foreach ($talleres as $taller)
+        {
+            foreach ($taller->horarios as $horario)
+            {
+                $asistencia = asistencia::where(['horario_id'=>$horario->id,'user_id'=>$alumno->id])->get();
+                // $asistencia = asistencia::first();
+                $horario['asistencia'] = $asistencia;
+            }
+        }
+
         $alumno['talleres'] = $talleres;
+
+
 
         if($alumno)
         {
